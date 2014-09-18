@@ -215,7 +215,7 @@ img { max-width: 100%; }
 
 .hero {
   background-color: #2c3035;
-  background-image: url("img/banner.jpg");
+  background-image: url("../img/banner.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -356,7 +356,7 @@ img { max-width: 100%; }
 }*/
 
 .venue {
-  background: #80798f url("img/map.jpg") no-repeat center center;
+  background: #80798f url("../img/map.jpg") no-repeat center center;
   height: 340px;
   border: none;
   padding-top: 80px;
@@ -449,7 +449,7 @@ img { max-width: 100%; }
   *margin-right: .3em;
   line-height: 40px;
   vertical-align: text-top;
-  background-image: url("img/sprite.png");
+  background-image: url("../img/sprite.png");
   background-position: 40px 40px;
   background-repeat: no-repeat;
   margin-top: 1px;
@@ -950,7 +950,7 @@ img { max-width: 100%; }
 only screen and (min-device-pixel-ratio : 1.5) {
   [class^="icon-"],
   [class*=" icon-"] {
-    background-image: url("img/sprite@2x.png");
+    background-image: url("../img/sprite@2x.png");
     -moz-background-size: 400px 400px;
     -ie-background-size: 400px 400px;
     -o-background-size: 400px 400px;
