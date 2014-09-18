@@ -461,11 +461,18 @@ color: #F5EEE8;
           background-repeat: no-repeat;
           margin-top: 1px;
         }
-        .icon-ruby-china { background-position: 0 0; width: 90px; height: 80px; }
-        .icon-pragmatic-ly { background-position: 0 -80px; width: 270px; height: 80px; }
-        .icon-knewone { background-position: 0 -160px; width: 230px; height: 80px; }
-        .icon-twitter { background-position: -90px 0; }
-        .icon-weibo { background-position: -130px 0; }
+        .icon-wechat { background-position: -80px 0; }
+        .icon-wechat:hover {
+          background-image: url("../img/QR-code.jpg");
+          background-position: 40px 40px;
+          background-repeat: no-repeat;
+          width: 400px;
+          height: 400px;
+          position: relative;
+          left: -150px;
+          top: -320px;
+        }
+        .icon-weibo { background-position: -127px 0; }
 
         .btn {
           display: inline-block;
