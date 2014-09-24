@@ -364,7 +364,7 @@ color: #F5EEE8;
 }*/
 
 .venue {
-  background: #80798f url("../img/map.jpg") no-repeat center center;
+  background: #ffffff url("../img/map.jpg") no-repeat center center;
   height: 340px;
   border: none;
   padding-top: 80px;
@@ -444,8 +444,10 @@ color: #F5EEE8;
 }
 .footer .copyright {
   font-size: 13px;
-  text-transform: uppercase;
   color: #666;
+}
+.footer .copyright a {
+  color: #e62b1e;
 }
 
 
