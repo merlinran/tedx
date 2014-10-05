@@ -8,21 +8,18 @@ title: TEDxChongqing
     <li><a href="#speakers">演讲嘉宾</a></li>
     <li><a href="#sponsors">赞助单位</a></li>
     <li><a href="#venue">会议地址</a></li>
-    <li><a href="http://www.huodongxing.com/events?tag=TEDx" target="_blank" class="btn">报名参会</a></li>
+    <li><a href="http://www.huodongxing.com/go/tedxchongqing" target="_blank" class="btn">报名参会</a></li>
   </ul>
 </nav>
 
 <section id="about" class="wrap about">
+  <video  class="ted_videos" id="tedx_video1" src="http://tedx-res.qiniudn.com/multiple-lightning.mp4" width="680" controls>
+  </video>
   <header>
     <h2>什么是TEDx?</h2>
-
-    <p>本地化的TED聚会</p>
   </header>
-  <div class="ted_videos" id="tedx_video1">
-  <embed src="http://player.youku.com/player.php/sid/XMTk4MjgwMTUy/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
-    </div>
   <p>
-    在”传递优秀思想“这一价值的指引下，TED推出了一个叫TEDx的项目.所谓TEDx，就是指那些由本地TED粉丝自愿发起、自行组织的小型聚会， 让本地的TED粉丝能够聚到一起，共享TED一刻.TEDx的x=独立组织的TED活动。TEDx活动通过结合TED演讲视频和现场嘉宾演讲来激起听众中的深 刻讨论与沟通。TED大会提供通用指导意见，但是TEDx活动是完全地方自行组织。
+    秉着“传播创想”的理念，TED推出了一个叫TEDx的项目，所谓TEDx，就是指那些由本地TED粉丝自愿发起、自行组织的小型聚会，让本地的TED粉丝能够聚到一起，共享TED一刻。”x”即是独立组织的TED活动之意。人们通过邀请当地演讲人进行现场演讲、共同观看TED演讲视频，就一些问题进行深入的交流和讨论。TED会给TEDx活动提供建议和支持，但是这些活动完全是由粉丝自行组织的。
   </p>
 
 </section>
@@ -30,8 +27,21 @@ title: TEDxChongqing
 <section id="speakers" class="wrap speakers">
   <div class="container">
     <header>
-      <h2>主题演讲嘉宾</h2>
-      <p><span class="ad-placeholder">即将揭晓</span></p>
+      <h2>演讲嘉宾</h2>
+      <ul class="speakers-list clearfix">
+        <% data.speakers.each do |speaker| %>
+          <li>
+          <figure>
+            <img src="photos/<%= speaker.photo %>" alt="<%= speaker.name %>">
+          </figure>
+          <h3><%= speaker.name %></h3>
+          <h4><%= speaker.title %></h4>
+          </li>
+        <% end %>
+          <li>
+            <p><span class="ad-placeholder">即将揭晓</span></p>
+          </li>
+        </ul>
     </header>
 
     <ul class="speakers-list clearfix">

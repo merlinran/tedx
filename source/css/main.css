@@ -268,6 +268,9 @@ img { max-width: 100%; }
   line-height: 28px;
   text-shadow: 1px 1px 0 #fff;
 }
+.about > video.ted_videos {
+  max-width: 680px;
+}
 
 /* schedule table */
 .schedule-table {
@@ -516,7 +519,7 @@ color: #F5EEE8;
   display: inline-block;
   border: 3px dashed #ddd;
   max-width: 294px;
-  width: 100%;
+  width: 80%;
   height: 74px;
   font-size: 28px;
   line-height: 80px;
@@ -937,6 +940,7 @@ h3 {
 
 @media (max-width: 640px) {
   .global-nav ul li a { font-size: 16px; padding: 5px;}
+  .ted_videos { width: 320px; }
   #sponsors-details ul li { max-width: none !important; width: 100%; }
   .speakers-list li { width: 50%; }
   .speakers-list li:nth-child(odd) { clear: left; }
