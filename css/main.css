@@ -137,7 +137,7 @@ img { max-width: 100%; }
   background-repeat: no-repeat;
   background-position: left top;
   margin: 0 20px;
-   padding: 0;
+  padding: 0;
  }
 .global-nav ul li {
   display: inline;
@@ -146,7 +146,6 @@ img { max-width: 100%; }
 .global-nav ul li a {
   padding: 10px 3%;
   font-size: 20px;
-  color: #777;
   text-decoration: none;
 }
 .global-nav ul li a.btn {
@@ -195,6 +194,10 @@ img { max-width: 100%; }
 }
 .speakers-list p a:hover {
   color: #e5744e;
+}
+
+.speaker-intro p {
+  max-width: 640px;
 }
 
 .wrap {
@@ -488,6 +491,9 @@ color: #F5EEE8;
   font-weight: normal;
   border-radius: 5px;
   text-decoration: none;
+}
+.btn.disabled, .btn.disabled:hover {
+  background-color: gray;
 }
 .btn:hover {
   color: #fff;
