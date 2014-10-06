@@ -169,15 +169,17 @@ img { max-width: 100%; }
   margin: 0;
   padding: 0;
 }
-.speakers-list li {
+.speakers-list .speaker {
+  position: relative;
   list-style: none;
   float: left;
   width: 25%;
-  margin-bottom: 40px;
+  height: 300px;
+  padding-top: 20px;
+  margin-bottom: 20px;
 }
 .speakers-list figure img {
   width: 80%;
-  max-width: 100%;
 }
 .speakers-list h3 {
   font-size: 1em;
@@ -197,9 +199,21 @@ img { max-width: 100%; }
   color: #e5744e;
 }
 
-.speaker-intro {
-  width: 640px;
-  z-index: 2000 !important;
+.speaker .intro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: silver;
+  border-radius: 5px;
+  opacity: 0;
+  transition: all 0.5s linear;
+}
+
+.speaker:hover .intro {
+  opacity: 0.5;
 }
 
 .wrap {
@@ -214,7 +228,7 @@ img { max-width: 100%; }
   background-image: linear-gradient(to bottom, #EEE 0%,#F5F5F5 15%);
 }
 .wrap header {
-  margin-bottom: 60px;
+  margin-top: 60px;
   font-size: 1.2em;
   color: #555;
 }
@@ -665,6 +679,24 @@ margin: 0 0 0 -35px; }
   border-radius: 50%;
 vertical-align: inherit; }
 
+/* speakers page */
+
+.speakers-details > li:nth-child(2n) {
+  background-color: #eee;
+}
+.speakers-details > li:nth-child(2n+1) {
+  background-color: #ccc;
+}
+.speakers-details .intro {
+  text-align: left;
+}
+
+.speakers-details li img {
+  float: left;
+  padding-right: 40px;
+}
+
+/* responsive */
 @media screen and (max-width: 65.375em) {
   .cbp_tmtimeline > li .cbp_tmtime span:last-child {
 font-size: 1.5em; } }
@@ -939,6 +971,7 @@ h3 {
 }
 
 @media (max-width: 960px) {
+  .global-nav .logo { float: none; }
   .sponsors ul li:first-child { display: block; }
   #sponsors-details .container { width: 100%; }
   #sponsors-details .sponsors-platinum ul li { width: 100%; }
@@ -948,7 +981,6 @@ h3 {
 }
 
 @media (max-width: 640px) {
-  .global-nav .logo { float: none; }
   .global-nav ul li a { font-size: 16px; padding: 5px;}
   .ted_videos { width: 320px; }
   #sponsors-details ul li { max-width: none !important; width: 100%; }
