@@ -131,11 +131,12 @@ img { max-width: 100%; }
      -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
           box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
 }
+.global-nav > .logo {
+  padding-left: 20px;
+  width: 250px;
+  float: left;
+}
 .global-nav ul {
-  background-image: url("../img/logo-black.png");
-  background-size: 18%;
-  background-repeat: no-repeat;
-  background-position: left top;
   margin: 0 20px;
   padding: 0;
  }
@@ -947,6 +948,7 @@ h3 {
 }
 
 @media (max-width: 640px) {
+  .global-nav .logo { float: none; }
   .global-nav ul li a { font-size: 16px; padding: 5px;}
   .ted_videos { width: 320px; }
   #sponsors-details ul li { max-width: none !important; width: 100%; }
