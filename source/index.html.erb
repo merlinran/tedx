@@ -3,6 +3,7 @@ title: TEDxChongqing
 ---
 
 <nav class="global-nav">
+  <img class="logo" src="img/logo-black.png">
   <ul>
     <li><a href="#about">关于大会</a></li>
     <li><a href="#speakers">演讲嘉宾</a></li>
@@ -13,7 +14,7 @@ title: TEDxChongqing
 </nav>
 
 <section id="about" class="wrap about">
-  <video  class="ted_videos" id="tedx_video1" src="http://tedx-res.qiniudn.com/multiple-lightning.mp4" width="680" controls>
+  <video  class="ted_videos" id="tedx_video1" src="http://tedx-res.qiniudn.com/multiple-lightning-480p.mp4" poster="http://tedx-res.qiniudn.com/multiple-lightning-480p-cover.jpg" width="680" controls>
   </video>
   <header>
     <h2>什么是TEDx?</h2>
@@ -28,52 +29,25 @@ title: TEDxChongqing
   <div class="container">
     <header>
       <h2>演讲嘉宾</h2>
-      <ul class="speakers-list clearfix">
-        <% data.speakers.each do |speaker| %>
-          <li>
-          <figure>
-            <img src="photos/<%= speaker.photo %>" alt="<%= speaker.name %>">
-          </figure>
-          <h3><%= speaker.name %></h3>
-          <h4><%= speaker.title %></h4>
-          </li>
-        <% end %>
-          <li>
-            <p><span class="ad-placeholder">即将揭晓</span></p>
-          </li>
-        </ul>
     </header>
-
     <ul class="speakers-list clearfix">
-      <!--<li>
-        <figure>
-          <a href="http://bovensiepen.net/" rel="nofollow" target="_blank">
-            <img src="speakers/yefu.jpg" alt="土家野夫">
+      <% data.speakers.each do |speaker| %>
+      <li class="speaker">
+          <figure class="photo">
+            <img src="photos/<%= speaker.photo %>" alt="<%= speaker.name %>的照片">
+            <h3><%= speaker.name %></h3>
+            <h4><%= speaker.title %></h4>
+          </figure>
+          <a href="speakers.html#speaker_<%= speaker.name %>" class="intro">
           </a>
-        </figure>
-        <h3>土家野夫</h3>
-
-        <p><a href="http://www.siemens.com.cn" target="_blank" rel="nofollow">Siemens Limited China</a></p>
-      </li>-->
+      </li>
+      <% end %>
+      <li class="speaker">
+        <p><span class="ad-placeholder">即将揭晓</span></p>
+      </li>
     </ul>
   </div>
 </section>
-
-<!--<section id="schedule" class="wrap schedule">-->
-  <!--<div class="container clearfix">-->
-    <!--<header>-->
-      <!--<h2>大会日程安排</h2>-->
-    <!--</header>-->
-
-    <!--<table class="schedule-table">-->
-      <!--<tr>-->
-        <!--<th colspan="3">Day 1-->
-          <!--<small>11/1/2014</small>-->
-        <!--</th>-->
-      <!--</tr>-->
-    <!--</table>-->
-  <!--</div>-->
-<!--</section>-->
 
 <section id="sponsors" class="wrap sponsors">
   <header>
@@ -81,32 +55,6 @@ title: TEDxChongqing
 
     <!--<p>感谢赞助商支持，是他们使本次大会成为可能</p>-->
   </header>
-
-  <!--
-  <div class="sponsors-gold">
-    <ul>
-      <li><h4>金牌赞助商</h4></li>
-    </ul>
-  </div>
-
-  <div class="sponsors-silver">
-    <ul>
-      <li><h4>银牌赞助商</h4></li>
-    </ul>
-  </div>
-
-  <div class="sponsors-bronze">
-    <ul>
-      <li><h4>铜牌赞助商</h4></li>
-    </ul>
-  </div>
-
-  <div class="sponsors-media">
-    <ul>
-      <li><h4>媒体支持</h4></li>
-    </ul>
-  </div>
-  -->
 
   <p><a href="mailto:info@tedxchongqing.com?subject=赞助 TEDxChongqing 2014" class="ad-placeholder">虚位以待</a></p>
 

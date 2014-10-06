@@ -1,0 +1,35 @@
+---
+title: TEDxChongqing
+---
+
+<section id="speakers" class="wrap speakers">
+  <div class="container">
+    <header>
+      <h2>演讲嘉宾</h2>
+    </header>
+    <ul class="speakers-details clearfix">
+      <% data.speakers.each do |speaker| %>
+      <li>
+          <figure class="photo">
+            <img src="photos/<%= speaker.photo %>" alt="<%= speaker.name %>的照片">
+            <h3><%= speaker.name %></h3>
+            <h4><%= speaker.title %></h4>
+          </figure>
+          <div class="intro">
+            <ul>
+              <% speaker.honors.each do |honor| %>
+                <li>
+                <%= honor %>
+                </li>
+              <% end %>
+            </ul>
+            <% speaker.intro.each do |p| %>
+              <p><%= p %></p>
+            <% end %>
+            <p><%= speaker.topic %></p>
+          </a>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</section>
