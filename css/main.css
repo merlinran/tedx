@@ -196,8 +196,9 @@ img { max-width: 100%; }
   color: #e5744e;
 }
 
-.speaker-intro p {
-  max-width: 640px;
+.speaker-intro {
+  width: 640px;
+  z-index: 2000 !important;
 }
 
 .wrap {
