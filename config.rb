@@ -76,6 +76,16 @@ configure :build do
   # set :http_path, "/Content/images/"
 end
 
+activate :blog do |blog|
+  blog.name = "talks"
+  blog.prefix = "talks"
+end
+
+activate :blog do |blog|
+  blog.name = "events"
+  blog.prefix = "events"
+end
+
 activate :deploy do |deploy|
   deploy.method = :git
 end
