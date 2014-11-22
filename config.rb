@@ -76,6 +76,24 @@ configure :build do
   # set :http_path, "/Content/images/"
 end
 
+activate :directory_indexes
+
 activate :deploy do |deploy|
   deploy.method = :git
+end
+
+data.events.each do |by_year|
+  year = by_year[0]
+  year_events = by_year[1]
+  year_events.each do |event_map|
+    event_id = event_map[0]
+    event = event_map[1]
+    proxy "/#{year}/#{event_id}/event.html", "event/event.html", :locals => { :event => event }, :ignore => true
+    event.talks.each do |talk|
+      proxy "/#{year}/#{event_id}/talks/#{talk.name}.html", "event/talk.html", :locals => { :event => event, :talk => talk }, :ignore => true
+    end
+    event.speakers.each do |speaker|
+      proxy "/#{year}/#{event_id}/speakers/#{speaker.name}.html", "event/speaker.html", :locals => { :event => event, :speaker => speaker }, :ignore => true
+    end
+  end
 end

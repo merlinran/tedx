@@ -2,6 +2,23 @@
 title: TEDxChongqing
 ---
 
+  <header class="hero">
+    <figure><img src="/img/logo-white.png"/></figure>
+    <h1>TEDxChongqing</h1>
+
+    <h2>2014 年 10 月 26 日<br/>国泰艺术中心剧院</h2>
+  </header>
+
+<nav class="global-nav">
+  <ul>
+    <li><a href="/#about">关于大会</a></li>
+    <li><a href="/#speakers">演讲嘉宾</a></li>
+    <li><a href="/sponsors.html">赞助单位</a></li>
+    <li><a href="/#venue">会议地址</a></li>
+    <li><a href="http://www.huodongxing.com/go/tedxchongqing" target="_blank" class="btn disabled">票已售罄</a></li>
+  </ul>
+</nav>
+
 <section id="about" class="wrap about">
   <video  class="ted_videos" id="tedx_video1" src="http://tedx-res.qiniudn.com/multiple-lightning-480p.mp4" poster="http://tedx-res.qiniudn.com/multiple-lightning-480p-cover.jpg" width="680" controls>
   </video>
@@ -21,21 +38,19 @@ title: TEDxChongqing
       <h2>演讲嘉宾</h2>
     </header>
     <ul class="speakers-list clearfix">
-      <% data.events.each do |event| %>
-        <% event.speakers.each do |speaker| %>
-        <li class="speaker">
-      <figure class="photo">
-        <img src="photos/<%= speaker.photo %>" alt="<%= speaker.name %>的照片">
-        <h3><%= speaker.name %></h3>
-        <h4><%= speaker.title %></h4>
-      </figure>
-      <a href="speakers.html#speaker_<%= speaker.name %>" class="intro">
-      </a>
-      </li>
-    <% end %>
-    <% end %>
+      <% event.speakers.each do |speaker| %>
       <li class="speaker">
-      <p><span class="ad-placeholder">即将揭晓</span></p>
+          <figure class="photo">
+            <img src="photos/<%= speaker.photo %>" alt="<%= speaker.name %>的照片">
+            <h3><%= speaker.name %></h3>
+            <h4><%= speaker.title %></h4>
+          </figure>
+          <a href="speakers.html#speaker_<%= speaker.name %>" class="intro">
+          </a>
+      </li>
+      <% end %>
+      <li class="speaker">
+        <p><span class="ad-placeholder">即将揭晓</span></p>
       </li>
     </ul>
   </div>
@@ -45,13 +60,13 @@ title: TEDxChongqing
   <div class="container">
     <div class="address">
       <h4>会议地址</h4>
-      <img src="img/venue.jpg"/>
+      <img src="/img/venue.jpg"/>
 
       <p>
-      国泰艺术中心<br>
-      <a href="http://j.map.baidu.com/hQdHw" target="_blank" rel="nofollow" title="点击查看地图">
-        渝中区解放碑商业区CBD
-      </a>
+        国泰艺术中心<br>
+        <a href="http://j.map.baidu.com/hQdHw" target="_blank" rel="nofollow" title="点击查看地图">
+          渝中区解放碑商业区CBD
+        </a>
       </p>
     </div>
   </div>
