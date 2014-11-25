@@ -1,4 +1,5 @@
-- name: '汤敏'
+- id: 'tangmin'
+  name: '汤敏'
   photo: 'tangmin.jpg'
   title: '经济学家、国务院参事'
   honors:
@@ -12,14 +13,16 @@
   topic:
     本次大会汤敏老师将围绕MOOC（大规模开放式网络课程）可以扶贫吗为大家带来一场18分钟的思想盛宴。
 
-- name: '王胜寒'
+- id: 'wangshenhan'
+  name: '王胜寒'
   photo: 'wangshenghan3.jpg'
   title: '网络红人、葡萄酒达人'
   honors: []
   intro:
     - 王胜寒，美国布朗大学历史系毕业，法国蓝带葡萄酒管理专业毕业，英国葡萄酒及烈酒教育基金会WSET高级品酒师。在纽约米其林三星餐厅Eleven Madison Park有过工作经验；《WINE》葡萄酒杂志撰稿人。曾制作过总点击率上亿的自媒体视频“纽约留学女”系列，以及针对葡萄酒教育的“醉鹅娘”系列。和喃猫、志伟一起创办了“企鹅指南”，旨在做出最有趣的法餐和葡萄酒教育。
 
-- name: '孙冕'
+- id: 'sunmian'
+  name: '孙冕'
   photo: 'sunmian.jpg'
   title: '媒体人，社会活动家'
   honors: []
@@ -32,7 +35,8 @@
   topic: |
     10月26日，让我们一起倾听这位不老行者的热血公益路。
 
-- name: '秦君'
+- id: 'qinjun'
+  name: '秦君'
   photo: 'qinjun.jpg'
   title: '孵化器专家、天使投资人'
   honors: []
@@ -44,3 +48,24 @@
     - 秦君，孵化器专家、天使投资人、清控科创控股股份有限公司董事长兼总裁。2000年开始在清华科技园工作，参与了清华科技园从初期建设到发展转型的全过程；2010年创办启迪科创（北京）科技发展有限公司；2012年7月运营厚德创新谷孵化器；2012年9月创办科创资本平台，管理数亿的创投基金；2013年，入选达沃斯论坛全球青年领袖。
   topic: |
     在本次大会上，秦君将分享自己丰富的经验和全球最前沿的创业信息，介绍中国当下的创业趋势和创业机会，引导新一代的创业者们如何融资。
+
+- id: 'linrui'
+  name: '林瑞'
+  photo: 'linrui.jpg'
+  title: 'XXX'
+  honors: []
+  intro: ''
+
+- id: 'joseph'
+  name: 'Joseph T. Oliver'
+  photo: 'joseph.jpg'
+  title: 'XXX'
+  honors: []
+  intro: ''
+
+- id: 'jianyi'
+  name: '简艺'
+  photo: 'jianyi.jpg'
+  title: 'XXX'
+  honors: []
+  intro: ''

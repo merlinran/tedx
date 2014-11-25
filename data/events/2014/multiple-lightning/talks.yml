@@ -1,1 +1,23 @@
-playlist_id: 23058111
+- id: 'old-soldiers-fading-away'
+  youku_vid: 'XODI0MTMyMDU2'
+  title: '凋零的老兵'
+  speaker_id: 'sunmian'
+  category: '历史'
+
+- id: 'netizens-are-selfish'
+  youku_vid: 'XODI0NTQyMjgw'
+  title: '网民都是“自私”的'
+  speaker_id: 'linrui'
+  category: '网络'
+
+- id: 'mooc'
+  youku_vid: 'XODI0NzI0NTA0'
+  title: '慕课能促进教育公平么？'
+  speaker_id: 'tangmin'
+  category: '教育'
+
+- id: 'china-in-25years'
+  youku_vid: 'XODI1NjQzNDYw'
+  title: '25年后的中国'
+  speaker_id: 'joseph'
+  category: '未来'

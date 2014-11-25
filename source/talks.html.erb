@@ -1,34 +1,23 @@
 ---
 title: 演讲集
 ---
-
-<section id="talks" class="wrap speakers">
-  <div class="container">
+<section id="talks" class="container">
     <header>
       <h2>演讲集</h2>
     </header>
-    <ul class="speakers-list clearfix">
-    <% data.events.each do |by_year| %>
-      <% year = by_year[0] %>
-      <% year_events = by_year[1] %>
-      <h2><%= year %></h2>
-      <ul class="clearfix">
-      <% year_events.each do |event_map| %>
-        <% event_id = event_map[0] %>
-        <% event = event_map[1] %>
-        <li>
-          <h2><%= event_id %></h2>
-          <ul class="youku playlist clearfix" data-playlist-id="<%= event.talks.playlist_id %>">
-          </ul>
-        </li>
-      <% end %>
-      </ul>
-      </li>
+    <% talks ||= all_talks %>
+    <% talks.group_by {|talk| {year: talk.year, event: talk.event} }.each do |event, talks| %>
+      <div>
+        <h2><%= event[:event][:name] %><small><%= event[:year] %></small></h2>
+      </div>
+      <div class="row">
+        <% talks.each do |talk| %>
+          <%= partial('partials/talk_thumbnail', locals: { talk: talk })%>
+        <% end %>
+      </div>
     <% end %>
-    </ul>
-  </div>
 </section>
-<div id="youkuplayer" style="height:800px"></div>
+<!--<div id="youkuplayer" style="height:800px"></div>
 <script type="text/javascript" src="http://player.youku.com/jsapi">
   function showVideo(vid){
      player = new YKU.Player("youkuplayer",{
@@ -39,14 +28,9 @@ title: 演讲集
      });
    };
   j = jQuery.noConflict();
-  j('.video').click(function() {
+  j('.talk').click(function() {
     showVideo('XODI0MTMyMDU2');
-console.log('afdsf');
+    console.log('afdsf');
     //showVideo(j(this).data('vid'));
   });
-</script>
-<script id="youku-video" type="text/x-jsrender">
-  <div id="player{{: id}}" data-vid="{{: id}}" class="video">
-    <img src="{{: thumbnail}}"></img>
-  </div>
-</script>
+</script>-->
