@@ -69,3 +69,38 @@
   title: 'XXX'
   honors: []
   intro: ''
+
+- id: 'wangshenlin'
+  name: '王盛林'
+  photo: 'jianyi.jpg'
+  title: 'XXX'
+  honors: []
+  intro: ''
+
+- id: 'lifangyu'
+  name: '李芳昱'
+  photo: 'jianyi.jpg'
+  title: 'XXX'
+  honors: []
+  intro: ''
+
+- id: 'shihaofei'
+  name: '史浩飞'
+  photo: 'jianyi.jpg'
+  title: 'XXX'
+  honors: []
+  intro: ''
+
+- id: 'ido'
+  name: 'IDO设计团队'
+  photo: 'jianyi.jpg'
+  title: 'XXX'
+  honors: []
+  intro: ''
+
+- id: 'xuchao'
+  name: '许超'
+  photo: 'jianyi.jpg'
+  title: 'XXX'
+  honors: []
+  intro: ''

@@ -37,4 +37,25 @@
       elem.find('.talk-thumbnail').attr('src', video.bigThumbnail);
     });
   });
+
+  $('.talk').click(function() {
+    var vid = $(this).closest('.talk').data('vid');
+    var code = '<embed src="http://player.youku.com/player.php/sid/' + vid + '/v.swf" allowFullScreen="true" width="100%" height="100%" quality="high" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>';
+    $('.player_container').html(code);
+    $('.player_container').append('<div class="close">X</div>');
+    $('.player_container').css('display', 'block');
+  });
+
+  $('.close').hover(function() {
+    console.log('hover');
+  });
+
+  $(document).keyup(function(e) {
+    if (e.keyCode === 27) { $('.close').click(); }
+  });
+
+  $(document).on('click', '.close', function() {
+    $('.player_container').html('').css('display', 'none');
+  });
+
 }(window.jQuery);

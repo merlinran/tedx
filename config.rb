@@ -141,15 +141,15 @@ helpers do
   end
 
   def event_path(event)
-    return "/#{event.year}/#{event.event_id}.html"
+    return "/#{event.year}/#{event.event_id}"
   end
 
   def speaker_path(speaker)
-    return "/#{speaker.year}/#{speaker.event_id}/speakers/#{speaker.id}.html"
+    return "/#{speaker.year}/#{speaker.event_id}/speakers/#{speaker.id}"
   end
 
   def talk_path(talk)
-    return "/#{talk.year}/#{talk.event_id}/talks/#{talk.id}.html"
+    return "/#{talk.year}/#{talk.event_id}/talks/#{talk.id}"
   end
 
 end

@@ -37,9 +37,8 @@ img { max-width: 100%; }
   clear: both;
   @include box-shadow( 0 0 3px rgba(0, 0, 0, 0.7));
   .logo {
-    padding-left: 20px;
+    padding: 10px 20px;
     width: 250px;
-    float: left;
   }
   ul {
     padding-top: 10px;
@@ -68,14 +67,17 @@ img { max-width: 100%; }
 
 .talk {
   @include make-md-column(3);
+  @include box-sizing(border-box);
+  cursor: pointer;
   position: relative;
-  margin: 15px;
-  padding: 0 !important;
+  padding-top: 30px;
   .talk-info {
+    @include transition(top, 0.5s, ease-in);
     position: absolute;
-    left: 5px;
-    bottom: 0;
+    left: 30px;
+    top: 60%;
     width: 100%;
+    color: #999;
     * {
       display: block;
     }
@@ -84,9 +86,7 @@ img { max-width: 100%; }
     }
   }
   &:hover .talk-info {
-    top: 0;
-    color: #999;
-    @include transition(top, 0.5s);
+    top: 40px;
   }
   .talk-thumbnail {
     width: 100%;
@@ -96,15 +96,45 @@ img { max-width: 100%; }
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     height: 100%;
+    margin: 10px 0;
   }
   &:hover {
-    @include transform(scale(1.2));
+    @include transform(scale(1.5));
+    z-index: 2;
+  }
+}
+
+.player_container {
+  z-index: 3;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  embed {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 780px;
+    height: 476px;
+    margin-left: -390px;
+    margin-top: -238px;
+  }
+  .close {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 50px;
+    font-size: xx-large;
+    color: white;
   }
 }
 
 .footer {
+  text-align: center;
   color: #666;
   border: none;
   background: #2c3035;

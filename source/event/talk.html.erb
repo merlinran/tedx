@@ -1,5 +1,17 @@
 ---
 title: 演讲
 ---
-<iframe height=498 width=510 src="http://player.youku.com/embed/<%= talk.youku_vid %>" frameborder=0 allowfullscreen></iframe>
-<embed src="http://player.youku.com/player.php/sid/<%= talk.youku_vid %>/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+<div class="row">
+  <div class="col-md-8">
+    <embed src="http://player.youku.com/player.php/sid/<%= talk.youku_vid %>/v.swf" allowFullScreen="true" width="800" height="600" quality="high" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+    <h3><%= talk.title %></h3>
+    <%= link_to talk.year + talk.event.name, event_path(talk) %>
+  </div>
+  <div class="col-md-4">
+    <a href="<%= speaker_path(talk) %>">
+      <%= image_tag talk.speaker.photo %>
+    </a>
+    <h3><%= talk.speaker.name %> </h3>
+    <h3><%= talk.speaker.title %> </h3>
+  </div>
+</div>
