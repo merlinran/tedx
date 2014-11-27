@@ -1,11 +1,13 @@
 <div class="talk" data-vid="<%= talk.youku_vid %>">
   <!--<a href="<%= talk_path(talk) %>">-->
-    <img src="/img/video-placeholder.png" class="talk-thumbnail"></img>
+  <div  class="talk-thumbnail">
+    <img src="/img/video-placeholder.png"></img>
     <div class="talk-overlay"></div>
-    <div class="talk-info">
-      <div class="speaker_name"><%= talk.speaker.name %></div>
-      <h3 class="title"><%= talk.title %></h3>
-    </div>
+  </div>
+  <div class="talk-info">
+    <div class="speaker_name"><%= talk.speaker.name %></div>
+    <h3 class="title"><%= talk.title %></h3>
+  </div>
   <!--</a>-->
 </div>
 

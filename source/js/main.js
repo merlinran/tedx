@@ -34,7 +34,7 @@
         video_id: $(this).data('vid')
       }
     ).success(function(video) {
-      elem.find('.talk-thumbnail').attr('src', video.bigThumbnail);
+      elem.find('.talk-thumbnail img').attr('src', video.bigThumbnail);
     });
   });
 
