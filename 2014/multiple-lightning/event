@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="zh-cn" class="no-js"> <!--<![endif]-->
+<head>
+  <!--<base href="http://tedx.qiniudn.com/">-->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <!-- Use title if it's in the page YAML frontmatter -->
+  <title>TEDxChongqing</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="wb:webmaster" content="2a8723ce8fff57e5" />
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <script src="/js/vendor/modernizr-2.6.1.min.js"></script>
+  <!--<script src="http://libs.useso.com/js/jquery/1.11.1/jquery-1.11.1.min.js"></script>-->
+  <script src="/js/vendor/jquery-1.11.1.js"></script>
+  <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+  </head>
+  <body>
+  <!--[if lt IE 7]>
+    <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser
+    today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better
+    experience this site.</p>
+  <![endif]-->
+
+  <nav class="global-nav affix-top">
+    <a href="/"><img class="logo" src="/img/logo-black.png"></a>
+    <!--<ul>
+      <li class="dropdown">
+        <a id="dLabel" data-toggle="dropdown" role="button">
+          精彩视频
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+          <li><a href="/talks">全部</a></li>
+          <li><a href="/talks/历史">历史<small>2</small></a></li>
+          <li><a href="/talks/网络">网络<small>1</small></a></li>
+          <li><a href="/talks/教育">教育<small>1</small></a></li>
+          <li><a href="/talks/未来">未来<small>2</small></a></li>
+          <li><a href="/talks/生活">生活<small>1</small></a></li>
+          <li><a href="/talks/科学">科学<small>2</small></a></li>
+          <li><a href="/talks/创业">创业<small>1</small></a></li>
+          <li><a href="/talks/设计">设计<small>1</small></a></li>
+          <li><a href="/talks/金融">金融<small>1</small></a></li>
+          </ul>
+      </li>
+      <li class="dropdown">
+        <a id="dLabel" data-toggle="dropdown" role="button">
+          历届活动
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+          <li><a href="/2014/multiple-lightning">重光</a></li>
+          </ul>
+      </li>
+      <li><a href="/about">关于TEDxChongqing</a></li>
+    </ul>-->
+  </nav>
+
+  <div id="main-body" class="container">
+      <header class="hero">
+    <figure><img src="/img/logo-white.png"/></figure>
+    <h1>TEDxChongqing</h1>
+
+    <h2>2014 年 10 月 26 日<br/>国泰艺术中心剧院</h2>
+  </header>
+
+<nav class="global-nav">
+  <ul>
+    <li><a href="/#about">关于大会</a></li>
+    <li><a href="/#speakers">演讲嘉宾</a></li>
+    <li><a href="/sponsors.html">赞助单位</a></li>
+    <li><a href="/#venue">会议地址</a></li>
+    <li><a href="http://www.huodongxing.com/go/tedxchongqing" target="_blank" class="btn disabled">票已售罄</a></li>
+  </ul>
+</nav>
+
+<section id="about" class="wrap about">
+  <video  class="ted_videos" id="tedx_video1" src="http://tedx-res.qiniudn.com/multiple-lightning-480p.mp4" poster="http://tedx-res.qiniudn.com/multiple-lightning-480p-cover.jpg" width="680" controls>
+  </video>
+  <header>
+    <h2>什么是TEDx?</h2>
+  </header>
+  <p>
+    秉着“传播创想”的理念，TED推出了一个叫TEDx的项目，所谓TEDx，就是指那些由本地TED粉丝自愿发起、自行组织的小型聚会，让本地的TED粉丝能够聚到一起，共享TED一刻。”x”即是独立组织的TED活动之意。人们通过邀请当地演讲人进行现场演讲、共同观看TED演讲视频，就一些问题进行深入的交流和讨论。TED会给TEDx活动提供建议和支持，但是这些活动完全是由粉丝自行组织的。
+    <a href="http://www.ted.com/tedx">更多介绍（英文）>>></a>
+  </p>
+
+</section>
+
+<section id="speakers" class="wrap speakers">
+  <div class="container">
+    <header>
+      <h2>演讲嘉宾</h2>
+    </header>
+    <ul class="speakers-list clearfix">
+      <li class="speaker">
+          <figure class="photo">
+            <img src="photos/tangmin.jpg" alt="汤敏的照片">
+            <h3>汤敏</h3>
+            <h4>经济学家、国务院参事</h4>
+          </figure>
+          <a href="speakers.html#speaker_汤敏" class="intro">
+          </a>
+      </li>
+      <li class="speaker">
+          <figure class="photo">
+            <img src="photos/wangshenghan3.jpg" alt="王胜寒的照片">
+            <h3>王胜寒</h3>
+            <h4>网络红人、葡萄酒达人</h4>
+          </figure>
+          <a href="speakers.html#speaker_王胜寒" class="intro">
+          </a>
+      </li>
+      <li class="speaker">
+          <figure class="photo">
+            <img src="photos/sunmian.jpg" alt="孙冕的照片">
+            <h3>孙冕</h3>
+            <h4>媒体人，社会活动家</h4>
+          </figure>
+          <a href="speakers.html#speaker_孙冕" class="intro">
+          </a>
+      </li>
+      <li class="speaker">
+          <figure class="photo">
+            <img src="photos/qinjun.jpg" alt="秦君的照片">
+            <h3>秦君</h3>
+            <h4>孵化器专家、天使投资人</h4>
+          </figure>
+          <a href="speakers.html#speaker_秦君" class="intro">
+          </a>
+      </li>
+      <li class="speaker">
+          <figure class="photo">
+            <img src="photos/linrui.jpg" alt="林瑞的照片">
+            <h3>林瑞</h3>
+            <h4>XXX</h4>
+          </figure>
+          <a href="speakers.html#speaker_林瑞" class="intro">
+          </a>
+      </li>
+      <li class="speaker">
+          <figure class="photo">
+            <img src="photos/joseph.jpg" alt="Joseph T. Oliver的照片">
+            <h3>Joseph T. Oliver</h3>
+            <h4>XXX</h4>
+          </figure>
+          <a href="speakers.html#speaker_Joseph T. Oliver" class="intro">
+          </a>
+      </li>
+      <li class="speaker">
+          <figure class="photo">
+            <img src="photos/jianyi.jpg" alt="简艺的照片">
+            <h3>简艺</h3>
+            <h4>XXX</h4>
+          </figure>
+          <a href="speakers.html#speaker_简艺" class="intro">
+          </a>
+      </li>
+      <li class="speaker">
+          <figure class="photo">
+            <img src="photos/jianyi.jpg" alt="王盛林的照片">
+            <h3>王盛林</h3>
+            <h4>XXX</h4>
+          </figure>
+          <a href="speakers.html#speaker_王盛林" class="intro">
+          </a>
+      </li>
+      <li class="speaker">
+          <figure class="photo">
+            <img src="photos/jianyi.jpg" alt="李芳昱的照片">
+            <h3>李芳昱</h3>
+            <h4>XXX</h4>
+          </figure>
+          <a href="speakers.html#speaker_李芳昱" class="intro">
+          </a>
+      </li>
+      <li class="speaker">
+          <figure class="photo">
+            <img src="photos/jianyi.jpg" alt="史浩飞的照片">
+            <h3>史浩飞</h3>
+            <h4>XXX</h4>
+          </figure>
+          <a href="speakers.html#speaker_史浩飞" class="intro">
+          </a>
+      </li>
+      <li class="speaker">
+          <figure class="photo">
+            <img src="photos/jianyi.jpg" alt="IDO设计团队的照片">
+            <h3>IDO设计团队</h3>
+            <h4>XXX</h4>
+          </figure>
+          <a href="speakers.html#speaker_IDO设计团队" class="intro">
+          </a>
+      </li>
+      <li class="speaker">
+          <figure class="photo">
+            <img src="photos/jianyi.jpg" alt="许超的照片">
+            <h3>许超</h3>
+            <h4>XXX</h4>
+          </figure>
+          <a href="speakers.html#speaker_许超" class="intro">
+          </a>
+      </li>
+      <li class="speaker">
+        <p><span class="ad-placeholder">即将揭晓</span></p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="venue" class="wrap venue">
+  <div class="container">
+    <div class="address">
+      <h4>会议地址</h4>
+      <img src="/img/venue.jpg"/>
+
+      <p>
+        国泰艺术中心<br>
+        <a href="http://j.map.baidu.com/hQdHw" target="_blank" rel="nofollow" title="点击查看地图">
+          渝中区解放碑商业区CBD
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
+
+  </div>
+  <div class="player_container">
+  </div>
+
+  <footer class="wrap footer">
+    <div class="container">
+      <div class="social">
+        <a id="wechat" href="#wechat"><i class="icon-wechat"></i></a>
+        <a href="http://weibo.com/TEDxChongqing"><i class="icon-weibo"></i></a>
+      </div>
+
+      <p class="copyright">This independent TEDx event is operated under license from <a href="//ted.com">TED</a></p>
+    </div>
+  </footer>
+
+  <script id="youku-video" type="text/x-jsrender">
+      <img src="{{: bigThumbnail}}"></img>
+  </script>
+  <script src="/js/vendor/jsrender.min.js"></script>
+  <script src="/js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+  <!--<script>
+    var _gaq = [
+      ['_setAccount', 'UA-33952565-1'],
+      ['_trackPageview']
+    ];
+    (function (d, t) {
+      var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      g.src = ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s)
+    }(document, 'script'));
+  </script>-->
+  </body>
+  </html>
