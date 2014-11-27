@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="zh-cn" class="no-js"> <!--<![endif]-->
+<head>
+  <!--<base href="http://tedx.qiniudn.com/">-->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <!-- Use title if it's in the page YAML frontmatter -->
+  <title>演讲集</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="wb:webmaster" content="2a8723ce8fff57e5" />
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <script src="/js/vendor/modernizr-2.6.1.min.js"></script>
+  <!--<script src="http://libs.useso.com/js/jquery/1.11.1/jquery-1.11.1.min.js"></script>-->
+  <script src="/js/vendor/jquery-1.11.1.js"></script>
+  <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+  </head>
+  <body>
+  <!--[if lt IE 7]>
+    <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser
+    today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better
+    experience this site.</p>
+  <![endif]-->
+
+  <nav class="global-nav affix-top">
+    <a href="/"><img class="logo" src="/img/logo-black.png"></a>
+    <!--<ul>
+      <li class="dropdown">
+        <a id="dLabel" data-toggle="dropdown" role="button">
+          精彩视频
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+          <li><a href="/talks">全部</a></li>
+          <li><a href="/talks/历史">历史<small>2</small></a></li>
+          <li><a href="/talks/网络">网络<small>1</small></a></li>
+          <li><a href="/talks/教育">教育<small>1</small></a></li>
+          <li><a href="/talks/未来">未来<small>2</small></a></li>
+          <li><a href="/talks/生活">生活<small>1</small></a></li>
+          <li><a href="/talks/科学">科学<small>2</small></a></li>
+          <li><a href="/talks/创业">创业<small>1</small></a></li>
+          <li><a href="/talks/设计">设计<small>1</small></a></li>
+          <li><a href="/talks/金融">金融<small>1</small></a></li>
+          </ul>
+      </li>
+      <li class="dropdown">
+        <a id="dLabel" data-toggle="dropdown" role="button">
+          历届活动
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+          <li><a href="/2014/multiple-lightning">重光</a></li>
+          </ul>
+      </li>
+      <li><a href="/about">关于TEDxChongqing</a></li>
+    </ul>-->
+  </nav>
+
+  <div id="main-body" class="container">
+    <section id="talks" class="container">
+    <header>
+      <h2>演讲集</h2>
+    </header>
+      <div>
+        <h2>重光<small>2014</small></h2>
+      </div>
+      <div class="row">
+          <div class="talk" data-vid="XODMzMTE3MDcy">
+  <!--<a href="/2014/multiple-lightning/talks/startups-how-to-find-resources">-->
+  <div  class="talk-thumbnail">
+    <img src="/img/video-placeholder.png"></img>
+    <div class="talk-overlay"></div>
+  </div>
+  <div class="talk-info">
+    <div class="speaker_name">秦君</div>
+    <h3 class="title">创业者如何找资源</h3>
+  </div>
+  <!--</a>-->
+</div>
+
+
+      </div>
+</section>
+<!--<div id="youkuplayer" style="height:800px"></div>
+<script type="text/javascript" src="http://player.youku.com/jsapi">
+  function showVideo(vid){
+     player = new YKU.Player("youkuplayer",{
+       styleid: '8',
+       client_id: '0e24164dfdc4994d',
+       vid: vid,
+       show_related: false
+     });
+   };
+  j = jQuery.noConflict();
+  j('.talk').click(function() {
+    showVideo('XODI0MTMyMDU2');
+    console.log('afdsf');
+    //showVideo(j(this).data('vid'));
+  });
+</script>-->
+
+  </div>
+  <div class="player_container">
+  </div>
+
+  <footer class="wrap footer">
+    <div class="container">
+      <div class="social">
+        <a id="wechat" href="#wechat"><i class="icon-wechat"></i></a>
+        <a href="http://weibo.com/TEDxChongqing"><i class="icon-weibo"></i></a>
+      </div>
+
+      <p class="copyright">This independent TEDx event is operated under license from <a href="//ted.com">TED</a></p>
+    </div>
+  </footer>
+
+  <script id="youku-video" type="text/x-jsrender">
+      <img src="{{: bigThumbnail}}"></img>
+  </script>
+  <script src="/js/vendor/jsrender.min.js"></script>
+  <script src="/js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+  <!--<script>
+    var _gaq = [
+      ['_setAccount', 'UA-33952565-1'],
+      ['_trackPageview']
+    ];
+    (function (d, t) {
+      var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      g.src = ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s)
+    }(document, 'script'));
+  </script>-->
+  </body>
+  </html>
