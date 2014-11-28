@@ -112,7 +112,7 @@ img { max-width: 100%; }
   }
 }
 
-.player_container {
+#player_container {
   z-index: 3;
   display: none;
   width: 100%;
@@ -121,7 +121,7 @@ img { max-width: 100%; }
   position: fixed;
   top: 0;
   left: 0;
-  embed {
+  #player_placeholder {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -129,6 +129,12 @@ img { max-width: 100%; }
     height: 476px;
     margin-left: -390px;
     margin-top: -238px;
+    @media (max-width: $screen-md-min) {
+      width: 390px;
+      height: 238px;
+      margin-left: -195px;
+      margin-top: -119px;
+    }
   }
   .close {
     cursor: pointer;
