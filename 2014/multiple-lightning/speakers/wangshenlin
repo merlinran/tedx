@@ -78,7 +78,9 @@
 </section>
 
   </div>
-  <div class="player_container">
+  <div id="player_container">
+    <div class="close">X</div>
+    <div id="player_placeholder">X</div>
   </div>
 
   <footer class="wrap footer">
@@ -92,10 +94,16 @@
     </div>
   </footer>
 
-  <script id="youku-video" type="text/x-jsrender">
-      <img src="{{: bigThumbnail}}"></img>
+  <script type="text/javascript" src="http://player.youku.com/jsapi">
+    window.playVideo = function(id, vid) {
+      player = new YKU.Player(id, {
+        autoplay: true,
+        styleid: '1',
+        client_id: '0e24164dfdc4994d',
+        vid: vid
+      })
+    };
   </script>
-  <script src="/js/vendor/jsrender.min.js"></script>
   <script src="/js/main.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

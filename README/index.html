@@ -19,7 +19,7 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
   <link rel="stylesheet" href="/css/normalize-ec2a8901.css">
-  <link rel="stylesheet" href="/css/main-bb59adb5.css">
+  <link rel="stylesheet" href="/css/main-0b41df93.css">
   <script src="/js/vendor/modernizr-2.6.1.min-68fdcc99.js"></script>
   <!--<script src="http://libs.useso.com/js/jquery/1.11.1/jquery-1.11.1.min.js"></script>-->
   <script src="/js/vendor/jquery-1.11.1-22db31db.js"></script>
@@ -134,7 +134,9 @@ you want to write about your project.</p>
 of developers have helped make the HTML5 Boilerplate what it is today.</p>
 
   </div>
-  <div class="player_container">
+  <div id="player_container">
+    <div class="close">X</div>
+    <div id="player_placeholder">X</div>
   </div>
 
   <footer class="wrap footer">
@@ -148,11 +150,17 @@ of developers have helped make the HTML5 Boilerplate what it is today.</p>
     </div>
   </footer>
 
-  <script id="youku-video" type="text/x-jsrender">
-      <img src="{{: bigThumbnail}}"></img>
+  <script type="text/javascript" src="http://player.youku.com/jsapi">
+    window.playVideo = function(id, vid) {
+      player = new YKU.Player(id, {
+        autoplay: true,
+        styleid: '1',
+        client_id: '0e24164dfdc4994d',
+        vid: vid
+      })
+    };
   </script>
-  <script src="/js/vendor/jsrender.min-c4e8a29a.js"></script>
-  <script src="/js/main-2656b6f5.js"></script>
+  <script src="/js/main-4e6e64e4.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <!--<script>
