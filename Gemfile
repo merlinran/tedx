@@ -5,4 +5,5 @@ source 'http://ruby.taobao.org'
 gem "middleman"
 gem "middleman-deploy"
 gem "bootstrap-sass"
+gem "eventmachine"
 gem "middleman-livereload", :git => "git://github.com/middleman/middleman-livereload.git"
