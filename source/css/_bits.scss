@@ -1,0 +1,42 @@
+/*********************
+VARIABLES
+ *********************/
+$tedx-red: #E62B1E;
+$anchor-color: #999;
+$anchor-active-color: #000;
+
+
+$player-width: 780px;
+$player-height: 476px;
+
+$minimum-padding: 10px;
+
+/*********************
+BREAKPOINTS
+ *********************/
+
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: 70em) { @content ; }
+  }
+  @else if $point == laptop {
+    @media (min-width: 64em) { @content ; }
+  }
+  @else if $point == pad {
+    @media (min-width: 50em) { @content ; }
+  }
+  @else if $point == phone {
+    @media (max-width: 50em)  { @content ; }
+  }
+}
+
+@mixin centered-player($width, $height) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: $width;
+  height: $height;
+  margin-left: - $width / 2;
+  margin-top: - $height / 2;
+}
+

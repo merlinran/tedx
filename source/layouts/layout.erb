@@ -12,7 +12,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <!-- Use title if it's in the page YAML frontmatter -->
-  <title><%= data.page.title || 'TEDxChongqing' %></title>
+  <title><%= data.page.title %> | TEDxChongqing</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="wb:webmaster" content="2a8723ce8fff57e5" />
@@ -28,54 +28,15 @@
     experience this site.</p>
   <![endif]-->
 
-  <nav class="global-nav affix-top">
-    <a href="/"><img class="logo" src="/img/logo-black.png"></a>
-    <!--<ul>
-      <li class="dropdown">
-        <a id="dLabel" data-toggle="dropdown" role="button">
-          精彩视频
-          <span class="caret"></span>
-        </a>
-        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-          <li><a href="/talks">全部</a></li>
-          <% all_talks.group_by { |talk| talk.category }.each do |category, talks| %>
-          <li><a href="/talks/<%=category%>"><%= category %><small><%= talks.count %></small></a></li>
-          <% end %>
-          </ul>
-      </li>
-      <li class="dropdown">
-        <a id="dLabel" data-toggle="dropdown" role="button">
-          历届活动
-          <span class="caret"></span>
-        </a>
-        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-          <% all_events.each do |event| %>
-          <li><a href="/<%= event.year %>/<%=event.event_id%>"><%= event.event.name %></a></li>
-          <% end %>
-          </ul>
-      </li>
-      <li><a href="/about">关于TEDxChongqing</a></li>
-    </ul>-->
-  </nav>
-
-  <div id="main-body" class="container">
+  <%= partial 'partials/header' %>
+  <section id="main-body" class="container">
     <%= yield %>
-  </div>
-  <div id="player_container">
+  </section>
+  <section id="player_container">
     <div class="close">X</div>
     <div id="player_placeholder">X</div>
-  </div>
-
-  <footer class="wrap footer">
-    <div class="container">
-      <div class="social">
-        <a id="wechat" href="#wechat"><i class="icon-wechat"></i></a>
-        <a href="http://weibo.com/TEDxChongqing"><i class="icon-weibo"></i></a>
-      </div>
-
-      <p class="copyright">This independent TEDx event is operated under license from <a href="//ted.com">TED</a></p>
-    </div>
-  </footer>
+  </section>
+  <%= partial 'partials/footer' %>
 
   <script type="text/javascript" src="http://tajs.qq.com/stats?sId=39246905" charset="UTF-8"></script>
   <script src="/js/vendor/modernizr-2.6.1.min.js"></script>

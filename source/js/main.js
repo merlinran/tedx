@@ -38,6 +38,7 @@
   });
 
   $(document).keyup(function(e) {
+    // Esc key pressed
     if (e.keyCode === 27) { $('.close').click(); }
   });
 

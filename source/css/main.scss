@@ -5,22 +5,25 @@
 @import "bootstrap/grid";
 @import "bootstrap/dropdowns";
 @import "compass";
+@import "compass/reset/utilities";
+@import "bits";
 
 /*
  * custom styles
  */
 body {
-  font-family: Helvetica, Arial, 'Hiragino Sans GB', STHeiti, sans-serif;
+  @include global-reset();
+  font-family: "Heiti SC", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   min-width: 320px;
 }
 
 a {
-  color: #999;
+  color: $anchor-color;
   text-decoration: none;
   &:hover{
-    color: #000;
+    color: $anchor-active-color;
   };
   @include transition(color, 0.2s);
 }
@@ -28,27 +31,28 @@ a {
 img { max-width: 100%; }
 
 /*
- * Global Nav, will be sticky when scrolling down.
+ * Header, will be sticky when scrolling down.
  */
-.global-nav {
-  background-color: #fff;
-  padding-top: 10px;
-  width: 100%;
-  clear: both;
+header {
   @include box-shadow( 0 0 3px rgba(0, 0, 0, 0.7));
   .logo {
-    padding: 10px 20px;
-    width: 250px;
+    display: block;
+    max-width: 250px;
+    margin: 0 auto;
+    padding-top: $minimum-padding;
+    @include breakpoint(pad) {
+      margin: 0;
+    }
   }
-  ul {
-    padding-top: 10px;
+  /*ul {
+    padding-top: $minimum-padding;
     margin: 0;
     li {
       display: inline;
     }
 
     a {
-      padding: 10px 3%;
+      padding: $minimum-padding 3%;
       font-size: 30px;
       &.btn {
         color: #fff;
@@ -62,10 +66,20 @@ img { max-width: 100%; }
       background-color: #555;
       color: #eee;
     }
+  }*/
+}
+
+.intro {
+  em {
+    font-size: 150%;
+    color: $tedx-red;
   }
 }
 
 .talk {
+  &:first-child {
+    width: 100%;
+  }
   @include make-md-column(3);
   @include box-sizing(border-box);
   cursor: pointer;
@@ -77,164 +91,156 @@ img { max-width: 100%; }
     left: 30px;
     top: 60%;
     width: 100%;
-    color: #999;
-    * {
-      display: block;
-    }
-    h3 {
-      margin: 0;
-    }
-  }
-  &:hover .talk-info {
-    top: 40px;
-  }
-  .talk-thumbnail {
-    width: 100%;
-    position: relative;
-    .talk-overlay {
-      background-image: linear-gradient(to bottom, rgba(0,0,0,0) 20%, black);
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
-  }
-  @media (min-width: $screen-md-min) {
-    &:hover {
-      @include transform(scale(1.5));
-      z-index: 2;
-      .talk-thumbnail {
-        box-shadow: 0 0 20px;
-      }
-    }
-  }
-}
+    color: $anchor-color;
+           * {
+             display: block;
+           }
+           h3 {
+             margin: 0;
+           }
+         }
+         &:hover .talk-info {
+           top: 40px;
+         }
+         .talk-thumbnail {
+           width: 100%;
+           position: relative;
+           .talk-overlay {
+             background-image: linear-gradient(to bottom, rgba(0,0,0,0) 20%, black);
+             position: absolute;
+             top: 0;
+             left: 0;
+             width: 100%;
+             height: 100%;
+             overflow: hidden;
+           }
+         }
+         @include breakpoint(laptop) {
+           &:hover {
+             //@include transform(scale(1.5));
+             //z-index: 2;
+             .talk-thumbnail {
+               box-shadow: 0 0 20px;
+             }
+           }
+         }
+       }
 
-#player_container {
-  z-index: 3;
-  display: none;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.95);
-  position: fixed;
-  top: 0;
-  left: 0;
-  #player_placeholder {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 780px;
-    height: 476px;
-    margin-left: -390px;
-    margin-top: -238px;
-    @media (max-width: $screen-md-min) {
-      width: 390px;
-      height: 238px;
-      margin-left: -195px;
-      margin-top: -119px;
-    }
-  }
-  .close {
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    right: 50px;
-    font-size: xx-large;
-    color: white;
-  }
-}
+       #player_container {
+         z-index: 3;
+         display: none;
+         width: 100%;
+         height: 100%;
+         background-color: rgba(0, 0, 0, 0.95);
+         position: fixed;
+         top: 0;
+         left: 0;
+         #player_placeholder {
+           position: absolute;
+           @include centered-player($player-width, $player-height);
+           @include breakpoint(phone) {
+             @include centered-player($player-width/2, $player-height/2);
+           }
+         }
+         .close {
+           cursor: pointer;
+           position: absolute;
+           top: 0;
+           right: 50px;
+           font-size: xx-large;
+           color: white;
+         }
+       }
 
-.footer {
-  text-align: center;
-  color: #666;
-  border: none;
-  background: #2c3035;
-  padding: 80px 0 20px;
-  .container { max-width: 820px; }
-  header {
-    position: relative;
-    border-bottom: 1px solid #494949;
-    margin: 0;
-    h2 {
-      position: absolute;
-      bottom: -15px;
-      left: 50%;
-      color: #666;
-      font-size: 24px;
-      font-weight: normal;
-      line-height: 30px;
-      width: 220px;
-      margin: 0 0 0 -110px;
-      background-color: #2c3035;
-    }
-  }
-  a {
-    color: #666;
-    text-decoration: none;
-    &:hover {
-      color: #d2d2d2;
-    }
-  }
-  .credits {
-    border-bottom: 1px solid #494949;
-    padding: 40px 0 10px;
-    li {
-      list-style: none;
-      display: inline;
-      display: inline-block;
-      font-size: 20px;
-      min-width: 270px;
-      p { margin: 30px auto; }
-    }
-  }
-  .social a{
-    display: inline;
-    display: inline-block;
-    line-height: 35px;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    margin: 40px 20px 10px;
-    @include transition(background-color 0.15s linear);
-    &:hover {
-      background-color: #d2d2d2;
-    }
-  }
-  .copyright {
-    font-size: 13px;
-    color: #666;
-    a {
-      color: #e62b1e;
-    }
-  }
-}
+       .footer {
+         text-align: center;
+         color: #666;
+         border: none;
+         background: #2c3035;
+         padding: 80px 0 20px;
+         .container { max-width: 820px; }
+         header {
+           position: relative;
+           border-bottom: 1px solid #494949;
+           margin: 0;
+           h2 {
+             position: absolute;
+             bottom: -15px;
+             left: 50%;
+             color: #666;
+             font-size: 24px;
+             font-weight: normal;
+             line-height: 30px;
+             width: 220px;
+             margin: 0 0 0 -110px;
+             background-color: #2c3035;
+           }
+         }
+         a {
+           color: #666;
+           text-decoration: none;
+           &:hover {
+             color: #d2d2d2;
+           }
+         }
+         .credits {
+           border-bottom: 1px solid #494949;
+           padding: 40px 0 10px;
+           li {
+             list-style: none;
+             display: inline;
+             display: inline-block;
+             font-size: 20px;
+             min-width: 270px;
+             p { margin: 30px auto; }
+           }
+         }
+         .social a{
+           display: inline;
+           display: inline-block;
+           line-height: 35px;
+           width: 55px;
+           height: 55px;
+           border-radius: 50%;
+           margin: 40px 20px 10px;
+           @include transition(background-color 0.15s linear);
+           &:hover {
+             background-color: #d2d2d2;
+           }
+         }
+         .copyright {
+           font-size: 13px;
+           color: #666;
+           a {
+             color: #e62b1e;
+           }
+         }
+       }
 
 
-[class^="icon-"],
-[class*=" icon-"] {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-          *margin-right: .3em;
-          line-height: 40px;
-          vertical-align: text-top;
-          background-image: url("../img/sprite.png");
-          background-position: 40px 40px;
-          background-repeat: no-repeat;
-          margin-top: 1px;
-        }
-        .icon-wechat {
-          background-position: -80px 0;
-          &:hover {
-            background-image: url("../img/QR-code.jpg");
-            background-position: 40px 40px;
-            width: 400px;
-            height: 400px;
-            position: relative;
-            left: -300px;
-            top: -320px;
-          }
-        }
-        .icon-weibo { background-position: -127px 0; }
+       [class^="icon-"],
+       [class*="icon-"] {
+         display: inline-block;
+         width: 40px;
+         height: 40px;
+                 *margin-right: .3em;
+                 line-height: 40px;
+                 vertical-align: text-top;
+                 background-image: url("../img/sprite.png");
+                 background-position: 40px 40px;
+                 background-repeat: no-repeat;
+                 margin-top: 1px;
+               }
+               .icon-wechat {
+                 background-position: -80px 0;
+                 &:hover {
+                   background-image: url("../img/QR-code.jpg");
+                   background-position: 40px 40px;
+                   width: 400px;
+                   height: 400px;
+                   position: relative;
+                   left: -300px;
+                   top: -320px;
+                 }
+               }
+               .icon-weibo { background-position: -127px 0; }

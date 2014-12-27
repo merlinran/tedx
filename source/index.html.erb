@@ -1,5 +1,5 @@
 ---
-title: TEDxChongqing
+title: 首页
 ---
 
 <section id="banner">
@@ -9,6 +9,10 @@ title: TEDxChongqing
     <%= partial 'partials/talk_thumbnail', locals: { talk: talk } %>
   <% end %>
 </section>
+<section id="news">
+</section>
 <section id="events">
+  <% latest_event = all_events.sort { |x, y| x.date <=> y.date }.last %>
+  <%= partial 'partials/event_thumbnail', locals: { event: latest_event } %>
 </section>
 <%= partial 'partials/tedx_intro' %>
