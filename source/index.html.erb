@@ -5,14 +5,29 @@ title: 首页
 <section id="banner">
 </section>
 <section id="featured-talks" class="row">
-  <% all_talks.each do |talk| %>
-    <%= partial 'partials/talk_thumbnail', locals: { talk: talk } %>
-  <% end %>
-</section>
-<section id="news">
-</section>
-<section id="events">
-  <% latest_event = all_events.sort { |x, y| x.date <=> y.date }.last %>
-  <%= partial 'partials/event_thumbnail', locals: { event: latest_event } %>
-</section>
-<%= partial 'partials/tedx_intro' %>
+  <div class="carousel slide" id="myCarousel">
+    <div class="carousel-inner">
+      <% talks = all_talks %>
+      <div class="item active">
+        <% talks.shift(3).each do |talk| %>
+          <%= partial 'partials/talk_thumbnail', locals: { talk: talk } %>
+        <% end %>
+      </div>
+      <% while talks.count > 0 do %>
+        <div class="item">
+        <% talks.shift(6).each do |talk| %>
+          <%= partial 'partials/talk_thumbnail', locals: { talk: talk } %>
+        <% end %>
+      </div>
+      <% end %>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+  </section>
+  <section id="news">
+  </section>
+  <section id="events">
+    <% latest_event = all_events.sort { |x, y| x.date <=> y.date }.last %>
+    <%= partial 'partials/event_thumbnail', locals: { event: latest_event } %>
+  </section>
+  <%= partial 'partials/tedx_intro' %>

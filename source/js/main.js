@@ -1,5 +1,6 @@
 //= require bootstrap/affix
 //= require bootstrap/dropdown
+//= require bootstrap/carousel
 
 !function ($) {
   /*jshint camelcase: false*/
