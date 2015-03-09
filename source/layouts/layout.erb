@@ -19,6 +19,7 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
   <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/swiper.min.css">
   <link rel="stylesheet" href="/css/main.css">
   </head>
   <body>
@@ -58,6 +59,17 @@
     </ul>-->
   </nav>
 
+  <section id="intro-video">
+    <!--[if lt IE 9]>
+    <script>
+    document.createElement('video');
+    </script>
+    <![endif]-->
+    <video autoplay loop poster="/img/TEDxChongqing-480p-cover.png" id="bgvid">
+      <source src="http://tedx-res.qiniudn.com/TEDxChongqing-480p.webm" type="video/webm">
+      <source src="http://tedx-res.qiniudn.com/TEDxChongqing-480p.mp4" type="video/mp4">
+    </video>
+  </section>
   <div id="main-body" class="container">
     <%= yield %>
   </div>
@@ -82,6 +94,8 @@
   <!--<script src="http://libs.useso.com/js/jquery/1.11.1/jquery-1.11.1.min.js"></script>-->
   <script src="/js/vendor/jquery-1.11.1.js"></script>
   <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+  <script src="/js/vendor/swiper.min.js"></script>
+  <script src="/js/main.js"></script>
   <script type="text/javascript" src="http://player.youku.com/jsapi">
     window.playVideo = function(id, vid) {
       player = new YKU.Player(id, {
@@ -92,7 +106,6 @@
       })
     };
   </script>
-  <script src="/js/main.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <!--<script>

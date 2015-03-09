@@ -5,25 +5,12 @@
   /*jshint camelcase: false*/
   /*global window, document, setTimeout*/
   'use strict';
-  $(function(){
+  $(document).ready(function(){
     setTimeout(function () {
       $('.global-nav').affix({
         offset: { top: 10 }
       });
     }, 100);
-  });
-
-  $('.talk').each(function() {
-  var elem = $(this);
-    $.get(
-      'https://openapi.youku.com/v2/videos/show.json',
-      {
-        client_id: '0e24164dfdc4994d',
-        video_id: $(this).data('vid')
-      }
-    ).success(function(video) {
-      elem.find('.talk-thumbnail img').attr('src', video.bigThumbnail);
-    });
   });
 
   $('.talk').click(function() {

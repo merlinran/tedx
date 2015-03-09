@@ -65,6 +65,22 @@ img { max-width: 100%; }
   }
 }
 
+section#intro-video {
+  video#bgvid {
+    display: block;
+    min-width: 100%; min-height: 100%;
+    width: 100%; height: auto; z-index: -100;
+    background: url(/img/TEDxChongqing-480p-cover.png) no-repeat;
+    background-size: cover;
+  }
+}
+@media screen and (max-device-width: 800px) {
+  section#intro-video {
+    background: url(/img/TEDxChongqing-480p-cover.png) #000 100% no-repeat center center fixed;
+    #bgvid { display: none; }
+  }
+}
+
 .talk {
   @include make-md-column(3);
   @include box-sizing(border-box);

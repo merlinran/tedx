@@ -2,13 +2,20 @@
 title: TEDxChongqing
 ---
 
-<section id="banner">
+<section id="2015plan" class="row">
+</section>
+<section id="2015conf" class="row">
+<h3>2015年度大会</h3>
+<h3>2015.4.19</h3>
+<h3>重庆大剧院</h3>
+</section>
+<section id="retrospect" class="row">
 </section>
 <section id="featured-talks" class="row">
   <% all_talks.each do |talk| %>
     <%= partial 'partials/talk_thumbnail', locals: { talk: talk } %>
-  <% end %>
+<% end %>
 </section>
-<section id="events">
+<section id="contact" class="row">
 </section>
-<%= partial 'partials/tedx_intro' %>
+
