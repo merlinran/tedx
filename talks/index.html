@@ -19,7 +19,8 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
   <link rel="stylesheet" href="/css/normalize-ec2a8901.css">
-  <link rel="stylesheet" href="/css/main-0b41df93.css">
+  <link rel="stylesheet" href="/css/swiper.min-3658dc40.css">
+  <link rel="stylesheet" href="/css/main-44d31e8e.css">
   </head>
   <body>
   <!--[if lt IE 7]>
@@ -28,39 +29,130 @@
     experience this site.</p>
   <![endif]-->
 
+  <section id="intro-video">
+    <!--[if lt IE 9]>
+    <script>
+    document.createElement('video');
+    </script>
+    <![endif]-->
+    <img src="/img/TEDxChongqing-480p-cover-946ab913.png">
+    <video autoplay loop id="bgvid">
+      <source src="http://tedx-res.qiniudn.com/TEDxChongqing-480p.webm" type="video/webm">
+      <source src="http://tedx-res.qiniudn.com/TEDxChongqing-480p.mp4" type="video/mp4">
+    </video>
+  </section>
+
   <nav class="global-nav affix-top">
     <a href="/"><img class="logo" src="/img/logo-black-0062241b.png"></a>
-    <!--<ul>
-      <li class="dropdown">
-        <a id="dLabel" data-toggle="dropdown" role="button">
-          精彩视频
-          <span class="caret"></span>
+    <ul>
+      <li>
+        <a href="#yearly-plan">
+          <span class="sequence">01</span>
+          <span class="name">活动预告</span>
         </a>
-        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-          <li><a href="/talks">全部</a></li>
-          <li><a href="/talks/历史">历史<small>2</small></a></li>
-          <li><a href="/talks/网络">网络<small>1</small></a></li>
-          <li><a href="/talks/教育">教育<small>1</small></a></li>
-          <li><a href="/talks/未来">未来<small>2</small></a></li>
-          <li><a href="/talks/生活">生活<small>1</small></a></li>
-          <li><a href="/talks/科学">科学<small>2</small></a></li>
-          <li><a href="/talks/创业">创业<small>1</small></a></li>
-          <li><a href="/talks/设计">设计<small>1</small></a></li>
-          <li><a href="/talks/金融">金融<small>1</small></a></li>
-          </ul>
       </li>
-      <li class="dropdown">
-        <a id="dLabel" data-toggle="dropdown" role="button">
-          历届活动
-          <span class="caret"></span>
+      <li>
+        <a href="#2015conf">
+          <span class="sequence">02</span>
+          <span class="name">2015年会</span>
         </a>
-        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-          <li><a href="/2014/multiple-lightning">重光</a></li>
-          </ul>
       </li>
-      <li><a href="/about">关于TEDxChongqing</a></li>
-    </ul>-->
+      <li>
+        <a href="#featured-talks">
+          <span class="sequence">03</span>
+          <span class="name">往期视频演讲</span>
+        </a>
+      </li>
+      <li>
+        <a href="#retrospect">
+          <span class="sequence">04</span>
+          <span class="name">活动回顾</span>
+        </a>
+      </li>
+      <li>
+        <a href="#contact">
+          <span class="sequence">05</span>
+          <span class="name">关于我们</span>
+        </a>
+      </li>
+    </ul>
   </nav>
+
+  <section id="yearly-plan">
+  <div id="left">
+    <div class="bg-text">
+      <p class="bg-char">告</p>
+      <p class="bg-char">预</p>
+      <p class="bg-char">动</p>
+      <p class="bg-char">活</p>
+    </div>
+  </div>
+  <div id="content">
+    <div id="center-column">
+      <h2 id="2015">2015</h2>
+      <ul>
+          <li class="event">
+        <ul>
+          <span>全年</span>
+          <span>邀请制</span>
+          <span>TEDxAdventure</span>
+        </ul>
+        </li>
+          <li class="event">
+        <ul>
+          <span>全年</span>
+          <span>半公开</span>
+          <span>TEDxMusicProject</span>
+        </ul>
+        </li>
+          <li class="event">
+        <ul>
+          <span>待定</span>
+          <span>公开</span>
+          <span>TEDxChongqingYouth</span>
+        </ul>
+        </li>
+        <li>
+      </ul>
+    </div>
+    <div id="right-column">
+      <ul>
+          <li class="event">
+        <ul>
+          <li class="date">3/17</li>
+          <li>邀请制</li>
+          <li>TEDxChongqingLive</li>
+        </ul>
+        </li>
+          <li class="event">
+        <ul>
+          <li class="date">4/18</li>
+          <li>限持大会门票人</li>
+          <li>TEDxWorkshop</li>
+        </ul>
+        </li>
+          <li class="event">
+        <ul>
+          <li class="date">4/19</li>
+          <li>公开售票</li>
+          <li>TEDxChongqing年会</li>
+        </ul>
+        </li>
+          <li class="event">
+        <ul>
+          <li class="date">5/28</li>
+          <li>公开售票</li>
+          <li>TEDxChongqingWomen</li>
+        </ul>
+        </li>
+        <li>
+      </ul>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <div class="clearfix"></div>
+</section>
+
 
   <div id="main-body" class="container">
     <section id="talks" class="container">
@@ -74,7 +166,7 @@
           <div class="talk" data-vid="XODI0MTMyMDU2">
   <!--<a href="/2014/multiple-lightning/talks/old-soldiers-fading-away">-->
   <div  class="talk-thumbnail">
-    <img src="/img/video-placeholder-137e8658.png"></img>
+    <img src="/2014/multiple-lightning/talks/old-soldiers-fading-away-4f3158f1.jpg"></img>
     <div class="talk-overlay"></div>
   </div>
   <div class="talk-info">
@@ -88,7 +180,7 @@
           <div class="talk" data-vid="XODI0NTQyMjgw">
   <!--<a href="/2014/multiple-lightning/talks/netizens-are-selfish">-->
   <div  class="talk-thumbnail">
-    <img src="/img/video-placeholder-137e8658.png"></img>
+    <img src="/2014/multiple-lightning/talks/netizens-are-selfish-618d77dd.jpg"></img>
     <div class="talk-overlay"></div>
   </div>
   <div class="talk-info">
@@ -102,7 +194,7 @@
           <div class="talk" data-vid="XODI0NzI0NTA0">
   <!--<a href="/2014/multiple-lightning/talks/mooc">-->
   <div  class="talk-thumbnail">
-    <img src="/img/video-placeholder-137e8658.png"></img>
+    <img src="/2014/multiple-lightning/talks/mooc-95b2d35f.jpg"></img>
     <div class="talk-overlay"></div>
   </div>
   <div class="talk-info">
@@ -116,7 +208,7 @@
           <div class="talk" data-vid="XODI1NjQzNDYw">
   <!--<a href="/2014/multiple-lightning/talks/china-in-25years">-->
   <div  class="talk-thumbnail">
-    <img src="/img/video-placeholder-137e8658.png"></img>
+    <img src="/2014/multiple-lightning/talks/china-in-25years-16de1540.jpg"></img>
     <div class="talk-overlay"></div>
   </div>
   <div class="talk-info">
@@ -130,7 +222,7 @@
           <div class="talk" data-vid="XODI2MjE4ODAw">
   <!--<a href="/2014/multiple-lightning/talks/hardware-2.0">-->
   <div  class="talk-thumbnail">
-    <img src="/img/video-placeholder-137e8658.png"></img>
+    <img src="/2014/multiple-lightning/talks/hardware-2.0-50b87783.jpg"></img>
     <div class="talk-overlay"></div>
   </div>
   <div class="talk-info">
@@ -144,7 +236,7 @@
           <div class="talk" data-vid="XODI3MjM5ODky">
   <!--<a href="/2014/multiple-lightning/talks/three-pair-of-wines">-->
   <div  class="talk-thumbnail">
-    <img src="/img/video-placeholder-137e8658.png"></img>
+    <img src="/2014/multiple-lightning/talks/three-pair-of-wines-1965a9ba.jpg"></img>
     <div class="talk-overlay"></div>
   </div>
   <div class="talk-info">
@@ -158,7 +250,7 @@
           <div class="talk" data-vid="XODI3Mjg3NDYw">
   <!--<a href="/2014/multiple-lightning/talks/einstein-dream">-->
   <div  class="talk-thumbnail">
-    <img src="/img/video-placeholder-137e8658.png"></img>
+    <img src="/2014/multiple-lightning/talks/einstein-dream-19b9e3d7.jpg"></img>
     <div class="talk-overlay"></div>
   </div>
   <div class="talk-info">
@@ -172,7 +264,7 @@
           <div class="talk" data-vid="XODMwMjUyOTM2">
   <!--<a href="/2014/multiple-lightning/talks/graphene">-->
   <div  class="talk-thumbnail">
-    <img src="/img/video-placeholder-137e8658.png"></img>
+    <img src="/2014/multiple-lightning/talks/graphene-50b48bd0.jpg"></img>
     <div class="talk-overlay"></div>
   </div>
   <div class="talk-info">
@@ -186,7 +278,7 @@
           <div class="talk" data-vid="XODMwMzY1MzQ4">
   <!--<a href="/2014/multiple-lightning/talks/oral-history">-->
   <div  class="talk-thumbnail">
-    <img src="/img/video-placeholder-137e8658.png"></img>
+    <img src="/2014/multiple-lightning/talks/oral-history-082c00c3.jpg"></img>
     <div class="talk-overlay"></div>
   </div>
   <div class="talk-info">
@@ -200,7 +292,7 @@
           <div class="talk" data-vid="XODMzMTE3MDcy">
   <!--<a href="/2014/multiple-lightning/talks/startups-how-to-find-resources">-->
   <div  class="talk-thumbnail">
-    <img src="/img/video-placeholder-137e8658.png"></img>
+    <img src="/2014/multiple-lightning/talks/startups-how-to-find-resources-ad2c0130.jpg"></img>
     <div class="talk-overlay"></div>
   </div>
   <div class="talk-info">
@@ -214,7 +306,7 @@
           <div class="talk" data-vid="XODMzNzQyMzMy">
   <!--<a href="/2014/multiple-lightning/talks/creative-humble-abode">-->
   <div  class="talk-thumbnail">
-    <img src="/img/video-placeholder-137e8658.png"></img>
+    <img src="/2014/multiple-lightning/talks/creative-humble-abode-6babdd6f.jpg"></img>
     <div class="talk-overlay"></div>
   </div>
   <div class="talk-info">
@@ -228,7 +320,7 @@
           <div class="talk" data-vid="XODM0NzY4MDg0">
   <!--<a href="/2014/multiple-lightning/talks/financial-inclusion-practice">-->
   <div  class="talk-thumbnail">
-    <img src="/img/video-placeholder-137e8658.png"></img>
+    <img src="/2014/multiple-lightning/talks/financial-inclusion-practice-82505a30.jpg"></img>
     <div class="talk-overlay"></div>
   </div>
   <div class="talk-info">
@@ -260,6 +352,7 @@
 </script>-->
 
   </div>
+
   <div id="player_container">
     <div class="close">X</div>
     <div id="player_placeholder">X</div>
@@ -276,22 +369,23 @@
     </div>
   </footer>
 
-  <script type="text/javascript" src="http://tajs.qq.com/stats?sId=39246905" charset="UTF-8"></script>
-  <script src="/js/vendor/modernizr-2.6.1.min-68fdcc99.js"></script>
+  <!--<script type="text/javascript" src="http://tajs.qq.com/stats?sId=39246905" charset="UTF-8"></script>
+  <script src="/js/vendor/modernizr-2.6.1.min-68fdcc99.js"></script>-->
   <!--<script src="http://libs.useso.com/js/jquery/1.11.1/jquery-1.11.1.min.js"></script>-->
   <script src="/js/vendor/jquery-1.11.1-22db31db.js"></script>
   <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.1.min-9b6a0d78.js"><\/script>')</script>
-  <script type="text/javascript" src="http://player.youku.com/jsapi">
-    window.playVideo = function(id, vid) {
-      player = new YKU.Player(id, {
-        autoplay: true,
-        styleid: '1',
-        client_id: '0e24164dfdc4994d',
-        vid: vid
-      })
-    };
-  </script>
-  <script src="/js/main-4e6e64e4.js"></script>
+  <script src="/js/vendor/jquery.sticky-kit.min-a0634d69.js"></script>
+  <script src="/js/main-ef84a5be.js"></script>
+  <!--<script type="text/javascript" src="http://player.youku.com/jsapi">
+window.playVideo = function(id, vid) {
+  player = new YKU.Player(id, {
+    autoplay: true,
+    styleid: '1',
+    client_id: '0e24164dfdc4994d',
+    vid: vid
+  })
+};
+  </script>-->
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <!--<script>
