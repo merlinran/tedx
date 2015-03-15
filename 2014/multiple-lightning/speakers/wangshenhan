@@ -89,31 +89,26 @@
   </div>
   <div id="content">
     <div id="center-column">
-      <h2 id="2015">2015</h2>
-      <ul>
-          <li class="event">
-        <ul>
-          <span>全年</span>
-          <span>邀请制</span>
-          <span>TEDxAdventure</span>
-        </ul>
-        </li>
-          <li class="event">
-        <ul>
-          <span>全年</span>
-          <span>半公开</span>
-          <span>TEDxMusicProject</span>
-        </ul>
-        </li>
-          <li class="event">
-        <ul>
-          <span>待定</span>
-          <span>公开</span>
-          <span>TEDxChongqingYouth</span>
-        </ul>
-        </li>
-        <li>
-      </ul>
+      <div id="title-2015">
+        <h2>2015</h2>
+      </div>
+      <table>
+          <tr>
+          <td>全年</td>
+          <td>邀请制</td>
+          <td>TEDxAdventure</td>
+        </tr>
+          <tr>
+          <td>全年</td>
+          <td>半公开</td>
+          <td>TEDxMusicProject</td>
+        </tr>
+          <tr>
+          <td>待定</td>
+          <td>公开</td>
+          <td>TEDxChongqingYouth</td>
+        </tr>
+      </table>
     </div>
     <div id="right-column">
       <ul>
