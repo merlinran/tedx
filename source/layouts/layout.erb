@@ -29,50 +29,60 @@
     experience this site.</p>
   <![endif]-->
 
-  <nav class="global-nav affix-top">
-    <a href="/"><img class="logo" src="/img/logo-black.png"></a>
-    <!--<ul>
-      <li class="dropdown">
-        <a id="dLabel" data-toggle="dropdown" role="button">
-          精彩视频
-          <span class="caret"></span>
-        </a>
-        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-          <li><a href="/talks">全部</a></li>
-          <% all_talks.group_by { |talk| talk.category }.each do |category, talks| %>
-          <li><a href="/talks/<%=category%>"><%= category %><small><%= talks.count %></small></a></li>
-          <% end %>
-          </ul>
-      </li>
-      <li class="dropdown">
-        <a id="dLabel" data-toggle="dropdown" role="button">
-          历届活动
-          <span class="caret"></span>
-        </a>
-        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-          <% all_events.each do |event| %>
-          <li><a href="/<%= event.year %>/<%=event.event_id%>"><%= event.event.name %></a></li>
-          <% end %>
-          </ul>
-      </li>
-      <li><a href="/about">关于TEDxChongqing</a></li>
-    </ul>-->
-  </nav>
-
   <section id="intro-video">
     <!--[if lt IE 9]>
     <script>
     document.createElement('video');
     </script>
     <![endif]-->
-    <video autoplay loop poster="/img/TEDxChongqing-480p-cover.png" id="bgvid">
+    <img src="/img/TEDxChongqing-480p-cover.png">
+    <video autoplay loop id="bgvid">
       <source src="http://tedx-res.qiniudn.com/TEDxChongqing-480p.webm" type="video/webm">
       <source src="http://tedx-res.qiniudn.com/TEDxChongqing-480p.mp4" type="video/mp4">
     </video>
   </section>
+
+  <nav class="global-nav affix-top">
+    <a href="/"><img class="logo" src="/img/logo-black.png"></a>
+    <ul>
+      <li>
+        <a href="#yearly-plan">
+          <span class="sequence">01</span>
+          <span class="name">活动预告</span>
+        </a>
+      </li>
+      <li>
+        <a href="#2015conf">
+          <span class="sequence">02</span>
+          <span class="name">2015年会</span>
+        </a>
+      </li>
+      <li>
+        <a href="#featured-talks">
+          <span class="sequence">03</span>
+          <span class="name">往期视频演讲</span>
+        </a>
+      </li>
+      <li>
+        <a href="#retrospect">
+          <span class="sequence">04</span>
+          <span class="name">活动回顾</span>
+        </a>
+      </li>
+      <li>
+        <a href="#contact">
+          <span class="sequence">05</span>
+          <span class="name">关于我们</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <%= partial 'partials/yearly-plan' %>
   <div id="main-body" class="container">
     <%= yield %>
   </div>
+
   <div id="player_container">
     <div class="close">X</div>
     <div id="player_placeholder">X</div>
@@ -89,23 +99,23 @@
     </div>
   </footer>
 
-  <script type="text/javascript" src="http://tajs.qq.com/stats?sId=39246905" charset="UTF-8"></script>
-  <script src="/js/vendor/modernizr-2.6.1.min.js"></script>
+  <!--<script type="text/javascript" src="http://tajs.qq.com/stats?sId=39246905" charset="UTF-8"></script>
+  <script src="/js/vendor/modernizr-2.6.1.min.js"></script>-->
   <!--<script src="http://libs.useso.com/js/jquery/1.11.1/jquery-1.11.1.min.js"></script>-->
   <script src="/js/vendor/jquery-1.11.1.js"></script>
   <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
-  <script src="/js/vendor/swiper.min.js"></script>
+  <script src="/js/vendor/jquery.sticky-kit.min.js"></script>
   <script src="/js/main.js"></script>
-  <script type="text/javascript" src="http://player.youku.com/jsapi">
-    window.playVideo = function(id, vid) {
-      player = new YKU.Player(id, {
-        autoplay: true,
-        styleid: '1',
-        client_id: '0e24164dfdc4994d',
-        vid: vid
-      })
-    };
-  </script>
+  <!--<script type="text/javascript" src="http://player.youku.com/jsapi">
+window.playVideo = function(id, vid) {
+  player = new YKU.Player(id, {
+    autoplay: true,
+    styleid: '1',
+    client_id: '0e24164dfdc4994d',
+    vid: vid
+  })
+};
+  </script>-->
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <!--<script>

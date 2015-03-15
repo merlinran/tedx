@@ -1,0 +1,15 @@
+- date: '3/17'
+  desc: '邀请制'
+  name: 'TEDxChongqingLive'
+
+- date: '4/18'
+  desc: '限持大会门票人'
+  name: 'TEDxWorkshop'
+
+- date: '4/19'
+  desc: '公开售票'
+  name: 'TEDxChongqing年会'
+
+- date: '5/28'
+  desc: '公开售票'
+  name: 'TEDxChongqingWomen'

@@ -3,14 +3,30 @@
 
 !function ($) {
   /*jshint camelcase: false*/
-  /*global window, document, setTimeout*/
+  /*global window, document*/
   'use strict';
   $(document).ready(function(){
-    setTimeout(function () {
-      $('.global-nav').affix({
-        offset: { top: 10 }
-      });
-    }, 100);
+    $('.affix-top').stick_in_parent();
+    $('#title-2015').stick_in_parent({parent: $('body'), offset_top: 100});
+  });
+
+  var sections = $('section'), nav = $('.global-nav'), nav_height = nav.outerHeight();
+
+  $(window).on('scroll', function () {
+    var cur_pos = $(this).scrollTop();
+
+    sections.each(function() {
+      var top = $(this).offset().top - nav_height,
+      bottom = top + $(this).outerHeight();
+
+      if (cur_pos >= top && cur_pos <= bottom) {
+        nav.find('a').removeClass('active');
+        sections.removeClass('active');
+
+        $(this).addClass('active');
+        nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+      }
+    });
   });
 
   $('.talk').click(function() {

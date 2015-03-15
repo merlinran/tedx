@@ -1,0 +1,82 @@
+@import "compass";
+
+@mixin vertical-align {
+  position: relative;
+  top: -50%;
+  @include transform(translateY(50%))
+}
+
+section#yearly-plan {
+  position: relative;
+  background-color: red;
+
+  #left {
+    position: relative;
+    float: left;
+    width: 15%;
+    height: 100%;
+    .bg-text {
+      @include vertical-align;
+      float: right;
+      .bg-char {
+        margin: -10px;
+        color: white;
+        font-size: 60px;
+        @include transform(rotate(270deg));
+      }
+    }
+  }
+  #content {
+    float: right;
+    width: 80%;
+    margin-right: 5%;
+    background-color: white;
+
+    #center-column {
+      @include box-sizing(border-box);
+      text-align: center;
+      float: left;
+      width: 70%;
+      #title-2015 {
+        width: 100%;
+        background-color: white;
+        h2 {
+          width: 300px;
+          font-size: 40px;
+          margin: 0 auto;
+          padding-top: 80px;
+          border-bottom: 2px solid black;
+        }
+      }
+      table {
+        margin: 20px auto 0 auto;
+        font-size: 18px;
+      }
+    }
+
+    #right-column {
+      @include box-sizing(border-box);
+      width: 30%;
+      padding-right: 5%;
+      float: right;
+      //position: absolute;
+      //right: 20px;
+      ul {
+        list-style: none;
+        li.event {
+          display: block;
+          border-bottom: 2px solid black;
+          li {
+            display: block;
+            text-align: center;
+            font-size: 18px;
+            &.date{
+              font-size: 32px;
+              color: red;
+            }
+          }
+        }
+      }
+    }
+  }
+}

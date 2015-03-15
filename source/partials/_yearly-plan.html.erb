@@ -1,0 +1,47 @@
+---
+title: 活动预告
+---
+
+<section id="yearly-plan">
+  <div id="left">
+    <div class="bg-text">
+      <p class="bg-char">告</p>
+      <p class="bg-char">预</p>
+      <p class="bg-char">动</p>
+      <p class="bg-char">活</p>
+    </div>
+  </div>
+  <div id="content">
+    <div id="center-column">
+      <div id="title-2015">
+        <h2>2015</h2>
+      </div>
+      <table>
+        <% data.other_events.each do |event| %>
+          <tr>
+          <td><%= event.date%></td>
+          <td><%= event.desc%></td>
+          <td><%= event.name%></td>
+        </tr>
+      <% end %>
+      </table>
+    </div>
+    <div id="right-column">
+      <ul>
+        <% data.forthcoming_events.each do |event| %>
+          <li class="event">
+        <ul>
+          <li class="date"><%= event.date%></li>
+          <li><%= event.desc%></li>
+          <li><%= event.name%></li>
+        </ul>
+        </li>
+      <% end %>
+        <li>
+      </ul>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <div class="clearfix"></div>
+</section>
+
